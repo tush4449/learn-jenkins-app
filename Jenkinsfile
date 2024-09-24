@@ -18,7 +18,12 @@ pipeline {
                 npm run build
                 ls -la
             '''
+            }
         }
+        stage('Test') {
+            agent {
+                sh 'npm test'
+            }
         }
     }
 }
