@@ -28,7 +28,14 @@ pipeline {
                 }
             }
             steps {
-                sh 'npm test'
+                sh '''
+                    npm test
+                    if [[ -f /var/jenkins_home/workspace/learn-jenkins-app/build/index.html ]]; then
+                        echo "Index file present."
+                    else
+                        echo "Index file absent"
+                    fi
+                '''
             }
         }
     }
