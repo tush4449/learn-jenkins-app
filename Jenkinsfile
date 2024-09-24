@@ -21,7 +21,7 @@ pipeline {
             }
         }
         stage('Test') {
-            agent {
+            steps {
                 sh 'npm test'
             }
         }
