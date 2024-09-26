@@ -2,8 +2,6 @@ pipeline {
     agent any
 
     stages {
-        /*
-
         stage('Build') {
             agent {
                 docker {
@@ -22,7 +20,6 @@ pipeline {
                 '''
             }
         }
-        */
 
         stage('Test') {
             agent {
@@ -46,6 +43,7 @@ pipeline {
                 docker {
                     image 'mcr.microsoft.com/playwright:v1.39.0-jammy'
                     reuseNode true
+                    args '-u root:root'
                 }
             }
 
