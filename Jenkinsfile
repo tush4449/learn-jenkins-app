@@ -107,7 +107,7 @@ pipeline {
             }
 
             environment {
-                CI_ENVIRONMENT_URL = 'PUT YOUR NETLIFY SITE URL HERE'
+                CI_ENVIRONMENT_URL = 'https://vocal-beijinho-3d9392.netlify.app'
             }
 
             steps {
